@@ -1,0 +1,1851 @@
+:root {
+  --white: #ffff;
+  --light-blue: #90c7ca;
+  --greenish-blue: #225f63;
+  --dark-blue: #011a1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+@font-face {
+  font-family: "baskerville-semibold-italic";
+  src: url(/assets/Baskervville/static/Baskervville-SemiBoldItalic.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "montserrat-regular";
+  src: url(/assets/Montserrat/static/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  background-image: url(./images/barcelona-logo-negro.png);
+  background-size: 150px 150px;
+  background-position: center center;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  box-shadow: 5px 5px 5px var(--greenish-blue);
+  z-index: 200;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.main-navigation {
+  max-width: 1050px;
+
+  ul {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 34px;
+  }
+
+  li {
+    list-style: none;
+    width: 200px;
+  }
+
+  a {
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--dark-blue);
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* transition: all 0.5s; */
+  }
+  a:hover {
+    color: var(--white);
+    background-color: var(--greenish-blue);
+    border-radius: 20px;
+  }
+  .nav-bar {
+    position: relative;
+  }
+  .menu-icon {
+    position: relative;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+
+.main-title {
+  #word-color {
+    color: var(--greenish-blue);
+  }
+
+  font-size: 24px;
+  text-align: center;
+  padding-top: 12px;
+  font-family: "baskerville-semibold-italic";
+  font-weight: bolder;
+  color: var(--dark-blue);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.horizontal-line1 {
+  display: inline-block;
+  position: relative;
+}
+.horizontal-line1::after {
+  content: "";
+  position: absolute;
+  /* max-width: 400px; */
+  width: 400px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  top: 32px;
+  right: -320px;
+}
+.horizontal-line1::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 3px;
+  background-color: var(--dark-blue);
+  top: 32px;
+  left: -320px;
+}
+
+.banner {
+  background-image: url(./images/bg-barcelona.jpg);
+  /* max-height: calc(100vh - 300px); */
+
+  background-size: cover;
+  background-position: 0% 62%;
+  max-width: 100%;
+  position: relative;
+  margin-top: 24px;
+
+  .link-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-box {
+    min-height: 50vh;
+  }
+}
+
+.rounded-link {
+  text-decoration: none;
+  border-radius: 50%;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--greenish-blue);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    border: 6px solid var(--white);
+  }
+  div:hover {
+    background-color: var(--dark-blue);
+  }
+}
+
+.bg-box {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  filter: opacity(80%);
+  margin: 0 64px;
+
+  h2 {
+    text-align: center;
+    color: var(--dark-blue);
+    font-family: "baskerville-semibold-italic";
+  }
+
+  p {
+    text-align: justify;
+    padding: 14px;
+    font-family: "montserrat-regular";
+    font-size: 12px;
+
+    strong {
+      color: var(--greenish-blue);
+      font-weight: bolder;
+    }
+  }
+
+  text-box-top {
+    color: var(--dark-blue);
+  }
+}
+
+.dark-blue-box {
+  background-color: var(--dark-blue);
+  max-width: 100%;
+}
+
+.text-box-center {
+  color: var(--white);
+  text-align: center;
+  max-width: 100%;
+  padding-bottom: 84px;
+  padding-top: 84px;
+  font-family: "baskerville-semibold-italic";
+  h3 {
+    padding-bottom: 24px;
+    font-size: 24px;
+  }
+
+  p {
+    font-family: "montserrat-regular";
+    font-size: 16px;
+  }
+}
+
+.four-columns {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+
+  .four-columns-box {
+    min-width: 25%;
+
+    a {
+      text-decoration: none;
+      color: var(--dark-blue);
+      opacity: 85%;
+      /* max-width: 400px; */
+
+      :hover {
+        filter: opacity(100%);
+      }
+    }
+  }
+
+  .four-columns-title {
+    position: absolute;
+    background-color: var(--white);
+    padding: 8px;
+    color: var(--dark-blue);
+    font-family: "baskerville-semibold-talic";
+    font-size: 16px;
+  }
+  figure {
+    overflow: hidden;
+  }
+
+  img {
+    max-height: 324px;
+    object-fit: cover;
+    min-width: 320px;
+  }
+}
+
+.white-box {
+  position: relative;
+  background-color: var(--white);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 64px;
+}
+.three-cards {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  padding-top: 4rem;
+  img {
+    width: 100%;
+    height: 362px;
+    object-fit: cover;
+    display: block;
+  }
+  .text-box-cards {
+    color: var(--dark-blue);
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    font-family: "baskerville-semibold-italic";
+    font-size: 18px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    box-shadow: 0 4px 8px 0 var(--greenish-blue);
+    border-radius: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    min-width: 320px;
+    width: 100%;
+  }
+  .card-details {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--dark-blue);
+
+    dt {
+      font-size: 20px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      font-family: "baskerville-semibold-italic";
+      color: var(--greenish-blue);
+    }
+    dd {
+      padding-left: 14px;
+      font-family: "montserrat";
+      font-size: 16px;
+      color: var(--dark-blue);
+    }
+  }
+}
+
+.banner-center {
+  background-image: url(./images/donde-ir-bg.jpg);
+  min-height: calc(80vh - 100px);
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 64px;
+  /* display: flex; */
+
+  .banner-center-box {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: calc(100vh - 100px); */
+  }
+
+  .map-header {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: var(--white);
+      text-shadow: 3px, 3px, 3px var(--dark-blue);
+      font-size: 2.5rem;
+      font-family: "baskerville-semibold-italic";
+      /* padding-left: 7rem; */
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      /* margin: 0 52px; */
+      margin-bottom: 42px;
+      margin-top: 42px;
+      padding: 0 52px;
+    }
+  }
+  .searching-box {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    font-family: "montserrat";
+    font-size: 16px;
+    max-width: 400px;
+    padding: 14px;
+    margin-bottom: 42px;
+    border-radius: 8px;
+    margin: 52px;
+
+    p {
+      text-align: center;
+    }
+  }
+  .google-maps {
+    position: relative;
+    width: 75%;
+    padding-bottom: 40%;
+    margin: 0 52px;
+    margin-bottom: 42px;
+    height: 0;
+    overflow: hidden;
+    filter: opacity(85%);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+
+      /* border-radius: 8px;
+      max-width: 600px;
+      max-height: 300px; */
+    }
+  }
+}
+
+.bottom-box {
+  background-image: url(./images/torero.jpg);
+  min-height: calc(80vh - 100px);
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .bottom-box-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: calc(80vh - 100px);
+  }
+}
+.form {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: var(--dark-blue);
+  background-color: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  min-height: 450px;
+  text-align: center;
+  filter: opacity(85%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 14px;
+  }
+
+  .controls {
+    font-family: "montserrat-regular";
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: var(--dark-blue);
+    outline: none;
+    display: flex;
+    width: 100%;
+  }
+
+  .send-button {
+    justify-content: center;
+    align-items: center;
+    font-family: "montserrat";
+  }
+
+  .form-button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px;
+  }
+  h2,
+  h4 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    font-family: "baskerville-semibold-italic";
+    padding-left: 14px;
+    padding-right: 24px;
+  }
+  .selection {
+    justify-content: start;
+    gap: 8px;
+    color: var(--dark-blue);
+    padding: 14px;
+    font-family: "baskerville-semibold-italic";
+
+    option {
+      font-family: "montserrat-regular";
+      color: var(--dark-blue);
+    }
+  }
+  .radio-select {
+    color: var(--dark-blue);
+    padding: 14px;
+    font-family: "baskerville-semibold-italic";
+    display: flex;
+    justify-content: center;
+
+    fieldset {
+      border-width: 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+    legend {
+      display: inline;
+    }
+
+    input[type="checkbox"] {
+      appearance: none;
+    }
+  }
+}
+
+.footer {
+  background-color: var(--dark-blue);
+  width: 100%;
+
+  .footer-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-elements {
+    display: flex;
+    min-width: 250px;
+    max-height: 18px;
+    text-align: center;
+
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 18px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .logo {
+    background-image: url(./images/logo-barcelona-white.png);
+  }
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--light-blue);
+  }
+
+  .author-section {
+    text-decoration: none;
+    color: var(--white);
+    padding: 16px;
+    gap: 14px;
+
+    h3 {
+      text-align: center;
+      padding: 14px;
+    }
+
+    .author {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      ul {
+        list-style: none;
+      }
+    }
+  }
+}
+
+/* Sección de GASTRONOMIA Y VINOS  */
+
+.banner-2 {
+  background-image: url(./images/vinos-y-gastro/gastronomia-bg.jpg);
+  min-height: calc(80vh - 100px);
+  background-size: cover;
+  background-position: center center;
+  max-width: 100%;
+  position: relative;
+
+  .banner-box-container2 {
+    display: flex;
+    min-height: calc(80vh - 100px);
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 52px;
+  }
+  .bg-box-2 {
+    min-height: 275px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    filter: opacity(70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: justify;
+      padding: 14px;
+      font-family: "montserrat-regular";
+      font-weight: bolder;
+      font-size: 12px;
+      color: var(--dark-blue);
+    }
+  }
+}
+
+/* .horizontal-line-avg {
+  display: inline-block;
+  position: relative;
+}
+.horizontal-line-vg::before {
+  content: "";
+  position: absolute;
+  width: 284px;
+  height: 3px;
+  background-color: var(--white);
+  top: 30px;
+  right: -320px;
+} */
+
+.page-title {
+  h2 {
+    font-size: 2.5rem;
+    font-family: "baskerville-semibold-italic";
+    color: var(--white);
+    text-shadow: 3px 3px 3px var(--dark-blue);
+  }
+}
+.rounded-link-container-2 {
+  display: flex;
+  justify-content: center;
+}
+.rounded-link-2 {
+  /* position: absolute;
+  bottom: -7%;
+  left: 47%; */
+  text-decoration: none;
+  z-index: 100;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--greenish-blue);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    border: 6px solid var(--white);
+  }
+  div:hover {
+    background-color: var(--dark-blue);
+  }
+}
+
+.white-box-2 {
+  position: relative;
+  background-color: var(--white);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 64px;
+
+  .three-cards {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    padding-top: 4rem;
+    img {
+      width: 100%;
+      height: 362px;
+      object-fit: cover;
+      display: block;
+    }
+    .text-box-cards {
+      color: var(--dark-blue);
+      text-align: center;
+      padding: 8px;
+      width: 100%;
+      font-family: "baskerville-semibold-italic";
+      font-size: 18px;
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      box-shadow: 0 4px 8px 0 var(--greenish-blue);
+      border-radius: 16px;
+      font-size: 14px;
+      overflow: hidden;
+      min-width: 320px;
+      width: 100%;
+    }
+    .card-details {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      color: var(--dark-blue);
+
+      dt {
+        font-size: 20px;
+        padding-bottom: 8px;
+        padding-left: 14px;
+        font-family: "baskerville-semibold-italic";
+        color: var(--greenish-blue);
+      }
+      dd {
+        padding-left: 14px;
+        font-family: "montserrat";
+        font-size: 16px;
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  /* .three-cards {
+
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  img {
+    width: 100%;
+    height: 362px;
+    object-fit: cover;
+  }
+  .text-box-cards {
+    color: var(--dark-blue);
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    font-family: "baskerville-semibold-italic";
+    font-size: 24px;
+  }
+  .cards {
+    padding-bottom: 2rem;
+    box-shadow: 0 4px 8px 0 var(--greenish-blue);
+    border-radius: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .card-details {
+    padding: 1rem;
+    color: var(--dark-blue);
+
+    dt {
+      font-size: 20px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      font-family: "baskerville-semibold-italic";
+      color: var(--greenish-blue);
+    }
+    dd {
+      padding-left: 14px;
+      font-family: "montserrat-regular";
+      font-size: 16px;
+      color: var(--dark-blue);
+    }
+  } */
+}
+.text-box-center-wine {
+  color: var(--white);
+  text-shadow: 3px 3px 3px var(--dark-blue);
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 84px;
+  padding-top: 84px;
+  font-family: "baskerville-semibold-italic";
+  h3 {
+    padding-bottom: 24px;
+    font-size: 24px;
+  }
+}
+
+.banner-vinos {
+  background-image: url(./images/vinos-y-gastro/vino-y-mano.jpg);
+  min-height: calc(100vh - 100px);
+  background-size: cover;
+  background-position: 0% 40%;
+  max-width: 100%;
+  position: relative;
+
+  .banner-vinos-container {
+    min-height: calc(100vh - 100px);
+    gap: 24px;
+  }
+
+  h3 {
+    font-family: "baskerville-semibold-italic";
+    font-size: 18px;
+    text-shadow: 3px 3px 3px var(--dark-blue);
+    /* position: absolute;
+    right: 150px;
+    top: 74px; */
+    color: var(--white);
+    text-align: center;
+    margin: 0 64px;
+  }
+}
+
+.wine-tags-box {
+  /* position: absolute;
+  top: 150px;
+  right: 150px; */
+  filter: opacity(90%);
+  color: var(--dark-blue);
+  margin: 0 64px;
+
+  .two-wine-tags {
+    display: flex;
+    gap: 14px;
+  }
+
+  .wine-tag {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    height: 74px;
+    width: 250px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+    .wine-glass img {
+      object-fit: cover;
+      height: 74px;
+      width: 74px;
+      position: absolute;
+      /* left: 175px; */
+      top: 0;
+      right: 0;
+    }
+
+    strong {
+      display: block;
+      text-decoration: none;
+      color: var(--dark-blue);
+      margin-left: 8px;
+      margin-top: 42px;
+      position: absolute;
+    }
+    strong:hover {
+      color: var(--greenish-blue);
+    }
+  }
+}
+
+.video-bottom {
+  h3 {
+    text-align: center;
+    margin-top: 74px;
+    margin-bottom: 74px;
+    color: var(--white);
+    font-family: "baskerville-semibold-italic";
+    font-size: 18px;
+    text-shadow: 3px 3px 3px var(--dark-blue);
+  }
+  .video-container {
+    background-size: cover;
+    /* min-width: 1200px;
+    width: 100%; */
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: calc(100vh - 100px);
+    background-size: cover;
+    max-width: 100%; */
+  }
+  .video-container iframe {
+    width: 90%;
+    height: 90%;
+    display: block;
+  }
+}
+/* Aqui comienza la seccion ARTE Y CULTURA */
+.horizontal-line-ac {
+  display: inline-block;
+  position: relative;
+}
+.horizontal-line-ac::after {
+  content: "";
+  position: absolute;
+  /* width: 250px; */
+  height: 3px;
+  background-color: var(--dark-blue);
+  top: 24px;
+  left: -100px;
+}
+.top-section-ac {
+  margin-top: 34px;
+  margin-bottom: 74px;
+  display: flex;
+  gap: 24px;
+
+  .text-ac {
+    padding-left: 28px;
+    padding-right: 28px;
+    color: var(--dark-blue);
+
+    h1 {
+      padding-bottom: 28px;
+
+      font-family: "baskerville-semibold-italic";
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      padding-bottom: 28px;
+      font-family: "baskerville-semibold-italic";
+    }
+    .ac-paragraph {
+      font-family: "montserrat-regular";
+      font-size: 16px;
+      color: var(--dark-blue);
+    }
+  }
+
+  .top-painting img {
+    max-height: calc(80vh - 100px);
+    max-width: 100%;
+    background-size: cover;
+
+    box-shadow: 10px 10px 10px 0 var(--greenish-blue);
+  }
+}
+
+.link-container-3 {
+  display: flex;
+  justify-content: center;
+  .rounded-link-3 {
+    /* position: absolute;
+  bottom: -14%;
+  left: 47%; */
+    text-decoration: none;
+    z-index: 100;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      background-color: var(--greenish-blue);
+      color: var(--white);
+      border-radius: 50%;
+      text-align: center;
+      font-size: 12px;
+      border: 6px solid var(--white);
+    }
+    div:hover {
+      background-color: var(--dark-blue);
+    }
+  }
+}
+.rounded-link-3 {
+  /* position: absolute;
+  bottom: -14%;
+  left: 47%; */
+  text-decoration: none;
+  z-index: 100;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--greenish-blue);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    border: 6px solid var(--white);
+  }
+  div:hover {
+    background-color: var(--dark-blue);
+  }
+}
+
+.dark-blue-box-ac {
+  background-color: var(--dark-blue);
+  width: 100%;
+  position: relative;
+  padding-top: 74px;
+  padding-bottom: 74px;
+
+  .text-ac-center {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    color: var(--white);
+    text-shadow: 3px 3px 3px var(--dark-blue);
+
+    h1 {
+      font-family: "baskerville-semibold-italic";
+      margin-top: 28px;
+      text-shadow: 1px var(--dark-blue);
+      font-size: 32px;
+    }
+    h2 {
+      font-family: "montserrat-regular";
+      margin-top: 28px;
+      text-shadow: 1px var(--dark-blue);
+      font-size: 16px;
+    }
+  }
+}
+.three-cards-ac {
+  background-image: url(./images/arte-y-cultura/pintura-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: var(--white);
+  padding-top: 64px;
+  padding-bottom: 84px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* padding-left: 64px;
+  padding-right: 64px; */
+
+  .three-cards {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    padding-top: 4rem;
+    img {
+      width: 100%;
+      height: 362px;
+      object-fit: cover;
+      display: block;
+    }
+    .text-box-cards {
+      color: var(--dark-blue);
+      text-align: center;
+      padding: 8px;
+      width: 100%;
+      font-family: "baskerville-semibold-italic";
+      font-size: 18px;
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      box-shadow: 0 4px 8px 0 var(--greenish-blue);
+      border-radius: 16px;
+      font-size: 14px;
+      overflow: hidden;
+      min-width: 320px;
+      width: 100%;
+      background-color: var(--white);
+    }
+    .card-details {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      color: var(--dark-blue);
+
+      dt {
+        font-size: 20px;
+        padding-bottom: 8px;
+        padding-left: 14px;
+        font-family: "baskerville-semibold-italic";
+        color: var(--greenish-blue);
+      }
+      dd {
+        padding-left: 14px;
+        font-family: "montserrat";
+        font-size: 16px;
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  /* .three-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .text-box-cards {
+    color: var(--dark-blue);
+    text-align: center;
+    width: 100%;
+  }
+  .cards {
+    box-shadow: 0 4px 8px 0 var(--greenish-blue);
+    border-radius: 16px;
+    font-size: 14px;
+    background-color: var(--white);
+    overflow: hidden;
+  }
+  .card-details {
+    padding: 16px;
+    color: var(--dark-blue);
+
+    dt {
+      color: var(--greenish-blue);
+      font-size: 20px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      font-family: "baskerville-semibold-italic";
+    }
+    dd {
+      padding-left: 16px;
+      color: var(--dark-blue);
+      font-family: "montserrat-regular";
+    }
+  } */
+}
+.painting-frame {
+  h1 {
+    text-align: center;
+    color: var(--dark-blue);
+    margin-top: 64px;
+    font-family: "baskerville-semibold-italic";
+    font-size: 24px;
+  }
+  .text-box-ac-bottom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 14px;
+    text-align: center;
+    color: var(--dark-blue);
+    font-family: "montserrat-regular";
+  }
+
+  /* margin: 0 64px; */
+
+  .banner-ac {
+    /* background-image: url(./images/arte-y-cultura/marco-ps.png); */
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 48px;
+
+    img {
+      position: absolute;
+      z-index: 0px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .iframe-container {
+      position: absolute;
+      z-index: 10;
+      inset: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* AQUI COMIENZA LA SECCION FIESTAS Y EVENTOS */
+
+.caption {
+  padding: 0.5rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.parallax-efect {
+  .banner-fye {
+    background-image: url(./images/fiestas-y-eventos/banner-fiestas-y-eventos.jpg);
+    height: calc(90vh - 100px);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      /* padding-top: 124px;
+      padding-bottom: 24px; */
+      text-align: center;
+      font-family: "baskerville-semibold-italic";
+
+      color: var(--white);
+      text-shadow: 5px 5px 5px var(--dark-blue);
+    }
+  }
+
+  .bg-1,
+  .bg-2,
+  .bg-3,
+  .bg-4,
+  .bg-5 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 42px; */
+    color: var(--white);
+    text-align: center;
+    text-shadow: 3px 3px 3px var(--dark-blue);
+  }
+
+  .bg-1 {
+    background-image: url(./images/fiestas-y-eventos/carnaval-barcelona.jpg);
+    height: 70vh;
+    filter: opacity(85%);
+  }
+  .bg-2 {
+    background-image: url(./images/fiestas-y-eventos/saint-jordi.jpg);
+    height: 70vh;
+    background-position: bottom 0px right 0px;
+    filter: opacity(85%);
+  }
+  .bg-3 {
+    background-image: url(./images/fiestas-y-eventos/primavera-sound.jpg);
+    height: 70vh;
+    filter: opacity(85%);
+  }
+  .bg-4 {
+    background-image: url(./images/fiestas-y-eventos/gracia-festes.jpg);
+    height: 70vh;
+    filter: opacity(85%);
+  }
+  .bg-5 {
+    background-image: url(./images/fiestas-y-eventos/castellers.jpg);
+    height: 70vh;
+    filter: opacity(85%);
+    background-position: top;
+  }
+  .content {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    padding-left: 28px;
+    padding-right: 28px;
+    text-align: justify;
+  }
+}
+.secondary-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .secondary-nav-tags {
+    width: 280px;
+    padding: 4px;
+
+    li {
+      list-style: none;
+      /* width: 400px; */
+    }
+    a {
+      background-color: var(--dark-blue);
+      text-decoration: none;
+      color: var(--white);
+      font-size: 18px;
+      font-family: "baskerville-semibold-italic";
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      transition: all 0.5s;
+      border-radius: 8px;
+    }
+    a:hover {
+      color: var(--white);
+      background-color: var(--greenish-blue);
+      border-radius: 20px;
+    }
+  }
+}
+.content-main-banner {
+  background-color: var(--dark-blue);
+  min-height: 64px;
+}
+#to-top {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  bottom: 50px;
+  right: 28px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#to-top:hover {
+  background-color: var(--greenish-blue);
+  color: var(--light-blue);
+}
+
+/* AQUI COMIENZA THANK YOU PAGE */
+
+.thankyou-banner {
+  background-image: url(./images/bg-barcelona.jpg);
+  height: calc(100vh - 100px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .thankyou-white-box {
+    margin-left: 16px;
+    margin-right: 16px;
+    position: absolute;
+    max-width: 600px;
+    max-height: 800px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* glassmorphism efect */
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--dark-blue);
+      font-family: "baskerville-semibold-italic";
+      padding: 48px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: var(--dark-blue);
+      font-family: "baskerville-semibold-italic";
+      padding: 48px;
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+
+  a {
+    width: 280px;
+    padding: 4px;
+    justify-content: center;
+    margin-bottom: 48px;
+
+    li {
+      list-style: none;
+      /* width: 400px; */
+    }
+
+    background-color: var(--dark-blue);
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-family: "baskerville-semibold-italic";
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: all 0.5s;
+    border-radius: 8px;
+  }
+}
+
+.scale {
+  transition: ease-in-out 0.3s;
+}
+.scale:hover {
+  scale: 108% 108%;
+}
+[class*="col-"] {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-1 {
+  width: 8.3333%;
+}
+.col-2 {
+  width: 16.6667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6667%;
+}
+.col-12 {
+  width: 100%;
+}
+
+.opacity {
+  filter: opacity(35%);
+}
+.d-flex {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .main-navigation {
+    display: flex;
+    ul {
+      gap: 8px;
+    }
+  }
+  .main-header {
+    .logo {
+      justify-content: start;
+    }
+  }
+
+  .nav-bar {
+    padding: 16px;
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+    }
+    .line {
+      width: 30px;
+      height: 2px;
+      background-color: var(--dark-blue);
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 50%;
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: var(--white);
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+    .nav-links li {
+      margin: 0;
+      padding: 8px 0;
+      width: 200px;
+    }
+
+    .nav-links a {
+      width: 100%;
+      padding: 8px;
+      background-color: var(--white);
+      text-decoration: none;
+      color: var(--dark-blue);
+      display: block;
+      text-align: center;
+      text-transform: capitalize;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    a:hover {
+      color: var(--white);
+      background-color: var(--greenish-blue);
+      border-radius: 20px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+      height: auto;
+    }
+    #menu-toggle:checked + .menu-icon .line:nth-child(1) {
+      transform: rotate(45deg) translate(15px, 3px);
+    }
+    #menu-toggle:checked + .menu-icon .line:nth-child(2) {
+      transform: scale(0);
+    }
+    #menu-toggle:checked + .menu-icon .line:nth-child(3) {
+      transform: rotate(-45deg) translate(15px, -4px);
+    }
+  }
+
+  .main-title {
+    font-size: 16px;
+  }
+  .horizontal-line1::before {
+    display: none;
+  }
+  .horizontal-line1::after {
+    display: none;
+  }
+
+  .banner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-box {
+    min-height: 275px;
+    max-width: 300px;
+    margin: 18px;
+    overflow: hidden;
+  }
+  .three-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .cards {
+      min-width: 320px;
+    }
+  }
+
+  .three-cards-ac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .white-box-2 {
+    .text-box-cards {
+      text-align: center;
+      margin: 14px;
+    }
+    .three-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .text-ac {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .horizontal-line-ac {
+    display: none;
+  }
+  .text-ac-center {
+    margin: 0 14px;
+  }
+  .text-box-center {
+    padding: 24px;
+  }
+  .four-columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .four-columns-box {
+    margin: 14px;
+  }
+  .banner-center-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom-box-container {
+    margin: 0 24px;
+    font-size: 12px;
+  }
+  .banner-box-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .text-box-center-wine {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .banner-vinos-container {
+    margin: 0 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+    }
+  }
+  .horizontal-line-ac::after {
+    width: 50px;
+  }
+  .wine-tags-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .two-wine-tags {
+    flex-direction: column;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .text-box-ac-bottom {
+    font-size: 12px;
+    margin: 14px 0;
+  }
+  .top-section-ac {
+    flex-direction: column;
+  }
+
+  .top-painting {
+    max-width: 80%;
+  }
+  .iframe-container {
+    padding-inline: 3rem;
+    padding-block: 2.5rem;
+  }
+  .parallax-efect {
+    .bg-1,
+    .bg-2,
+    .bg-3,
+    .bg-4,
+    .bg-5 {
+      font-size: 24px;
+    }
+    .banner-fye {
+      h1 {
+        font-size: 1.5rem;
+        margin: 14px 0;
+      }
+    }
+    .content {
+      font-size: 14px;
+      min-height: 200px;
+      padding: 24px;
+    }
+  }
+}
+
+@media screen and (width >= 768px) {
+  .banner-box {
+    height: 70vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .bg-box {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    max-height: 275px;
+    max-width: 300px;
+  }
+  .three-cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .four-columns-box {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    min-height: 324px;
+    margin-bottom: 84px;
+  }
+  .banner-center-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: calc(100vh - 100px);
+  }
+
+  .banner-box-container2 {
+    justify-content: center;
+    align-items: end;
+  }
+  .banner-vinos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+  .input-group {
+    flex-direction: row;
+  }
+
+  .text-box-ac-bottom {
+    font-size: 14px;
+  }
+  .top-section-ac {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .text-ac {
+      width: 50%;
+
+      h1 {
+        justify-content: center;
+        align-items: center;
+        padding-left: 162px;
+      }
+    }
+
+    .top-painting {
+      max-width: 100%;
+    }
+  }
+  .horizontal-line-ac::after {
+    width: 250px;
+  }
+  .iframe-container {
+    padding-inline: 8.5rem;
+    padding-block: 7.5rem;
+  }
+  /* .three-cards-ac {
+    padding-left: 64px;
+    padding-right: 64px;
+  } */
+
+  .parallax-efect {
+    .bg-1,
+    .bg-2,
+    .bg-3,
+    .bg-4,
+    .bg-5 {
+      font-size: 42px;
+    }
+    .banner-fye {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .content {
+      font-size: 18px;
+      min-height: 200px;
+    }
+  }
+
+  /* todo footer in mobile */
+}
