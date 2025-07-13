@@ -14,12 +14,12 @@
 
 @font-face {
   font-family: "baskerville-semibold-italic";
-  src: url(/assets/Baskervville/static/Baskervville-SemiBoldItalic.ttf);
+  src: url(./assets/Baskervville/static/Baskervville-SemiBoldItalic.ttf);
   font-weight: bold;
 }
 @font-face {
   font-family: "montserrat-regular";
-  src: url(/assets/Montserrat/static/Montserrat-Regular.ttf);
+  src: url(./assets/Montserrat/static/Montserrat-Regular.ttf);
   font-weight: normal;
 }
 
