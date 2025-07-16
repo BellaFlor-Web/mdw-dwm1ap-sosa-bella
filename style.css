@@ -289,6 +289,7 @@ html {
   padding-left: 2rem;
   padding-right: 2rem;
   margin-bottom: 64px;
+  text-align: center;
 }
 .three-cards {
   display: flex;
@@ -613,13 +614,15 @@ html {
   background-position: center center;
   max-width: 100%;
   position: relative;
+ 
+
 
   .banner-box-container2 {
     display: flex;
     min-height: calc(90vh - 100px);
     flex-direction: column;
     gap: 24px;
-    margin: 0 52px;
+  
   }
   .bg-box-2 {
     min-height: 275px;
