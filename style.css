@@ -353,14 +353,14 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
   margin-bottom: 64px;
+
   /* display: flex; */
 
   .banner-center-box {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    min-height: calc(100vh - 100px); */
+    display: flex;
+    justify-content: start;
+   
+   
   }
 
   .map-header {
@@ -378,9 +378,9 @@ html {
       padding-top: 1rem;
       padding-bottom: 1rem;
       /* margin: 0 52px; */
-      margin-bottom: 42px;
+      /* margin-bottom: 42px; */
       margin-top: 42px;
-      padding: 0 52px;
+      /* padding: 0 52px; */
     }
   }
   .searching-box {
@@ -392,7 +392,8 @@ html {
     padding: 14px;
     margin-bottom: 42px;
     border-radius: 8px;
-    margin: 52px;
+    /* margin: 52px;  */
+    
 
     p {
       text-align: center;
@@ -616,7 +617,7 @@ html {
 
   .banner-box-container2 {
     display: flex;
-    min-height: calc(80vh - 100px);
+    min-height: calc(90vh - 100px);
     flex-direction: column;
     gap: 24px;
     margin: 0 52px;
@@ -643,19 +644,6 @@ html {
   }
 }
 
-/* .horizontal-line-avg {
-  display: inline-block;
-  position: relative;
-}
-.horizontal-line-vg::before {
-  content: "";
-  position: absolute;
-  width: 284px;
-  height: 3px;
-  background-color: var(--white);
-  top: 30px;
-  right: -320px;
-} */
 
 .page-title {
   h2 {
@@ -860,7 +848,7 @@ html {
 
   .two-wine-tags {
     display: flex;
-    gap: 14px;
+    /* gap: 14px; */
   }
 
   .wine-tag {
@@ -1616,6 +1604,12 @@ html {
     .cards {
       min-width: 320px;
     }
+
+    .map-header{
+      margin-left: 0px;
+      
+    }
+    
   }
 
   .three-cards-ac {
@@ -1782,11 +1776,20 @@ html {
     align-items: start;
     min-height: calc(100vh - 100px);
   }
+    .map-header{
+      margin: 0px 52px;
+    }
+  
 
   .banner-box-container2 {
     justify-content: center;
     align-items: end;
   }
+  .white-box-2 {
+    .text-box-cards {
+      text-align: center;
+      margin: 14px;
+    }
   .banner-vinos-container {
     display: flex;
     flex-direction: column;
@@ -1851,4 +1854,6 @@ html {
   }
 
   /* todo footer in mobile */
+}
+
 }
